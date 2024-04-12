@@ -1,0 +1,4 @@
+repository "Mago_Mestre_V_alfa_1@luizfernandoe30@cloud"
+  path "/"
+    br "/main"
+    co "/main"
