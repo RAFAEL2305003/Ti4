@@ -98,3 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+  shoot: {fileID: 868194446287049678, guid: 87c67462abb3d18469b7e1dc3043947b, type: 3}
+  speed: 20
