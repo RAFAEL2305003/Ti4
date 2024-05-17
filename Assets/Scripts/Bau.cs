@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Bau : MonoBehaviour
@@ -60,8 +61,16 @@ public class Bau : MonoBehaviour
         if (other.gameObject.CompareTag("Player")){
             PlaySound2();
             StartCoroutine(sonns());
+            
+            StartCoroutine(puzzl());
             StartCoroutine(ExecutarAcaoComDelay());
         }
+    }
+
+    IEnumerator puzzl()
+    {
+        yield return new WaitForSeconds(0.75f);
+        SceneManager.LoadScene("Puzzle");
     }
 
     IEnumerator sonns()

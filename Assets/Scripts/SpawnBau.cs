@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bau : MonoBehaviour
+public class Spawns : MonoBehaviour
 {
     public GameObject itemPrefab;
     public GameObject Inimigo1Goblin;
@@ -11,6 +11,7 @@ public class bau : MonoBehaviour
 
     private float nextSpawnTime = 10;
     private float nextSpawnGoblinTime = 10;
+    private int numInimigos = 5;
 
     private void Start() {
         nextSpawnTime = Time.time + 10;
@@ -28,15 +29,17 @@ public class bau : MonoBehaviour
         }
         if (Time.time >= nextSpawnGoblinTime)
         {   
-            forDeSpawGoblin(10);
-            nextSpawnGoblinTime = Time.time + 5 ;
+            forDeSpawGoblin();
+            
+            nextSpawnGoblinTime = Time.time + 8 ;
         }
     }
 
-    private void forDeSpawGoblin(int enymis){
-        for (int i = 0; i < 10; i++){
+    private void forDeSpawGoblin(){
+        for (int i = 0; i < numInimigos; i++){
             SpawnGoblin();
         }
+        numInimigos = 10;
     }
 
     private void SpawnItem()
