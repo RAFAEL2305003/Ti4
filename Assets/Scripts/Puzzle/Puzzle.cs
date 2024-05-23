@@ -20,33 +20,16 @@ public class Puzzle : MonoBehaviour
     {
         grafo = Grafo.Instance;
         grafo.BFS(grafo.vertices[200]);
-        //Debug.Log(grafo.vertices[362000].ToString());
-        // for (int i = 0; i < grafo.vertices[0].adj.Count; i++)
-        // {
-        //     Debug.Log(grafo.vertices[0].adj[i].ToString());
-        // }
-        // for (int i = 0; i < 3; i++)
-        // {
-        //     for (int j = 0; j < 3; j++)
-        //     {
-        //         Debug.Log(grafo.vertices[0].puzzle[i, j]);
-        //     }
-        // }
         List<Vertice> vs = new List<Vertice>();
         Vertice v = grafo.vertices[0];
-
         vs.Insert(0, v);
+
         while (v.anc != null)
         {
             v = v.anc;
             vs.Insert(0, v);
         }
-        // foreach (Vertice va in vs)
-        // {
-        //     Debug.Log(va.ToString());
-        // }
-        // Debug.Log(vs.Count);
-        // Debug.Log("Array");
+
         int[] array = ConverterMatrizParaArray(vs[0].puzzle);
         Init(array);
         StartCoroutine(PlaySolution(vs));
@@ -55,6 +38,8 @@ public class Puzzle : MonoBehaviour
 
     IEnumerator PlaySolution(List<Vertice> vs)
     {
+        // Aguarda 1 segundo antes de continuar para a próxima iteração
+        yield return new WaitForSeconds(1.2f);
         for (int k = 0; k < vs.Count - 1; k++)
         {
             bool found = false;
@@ -95,7 +80,7 @@ public class Puzzle : MonoBehaviour
             ClickToSwap(x, y);
 
             // Aguarda 1 segundo antes de continuar para a próxima iteração
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.2f);
         }
     }
 
@@ -112,10 +97,9 @@ public class Puzzle : MonoBehaviour
         {
             for (int x = 0; x < 3; x++)
             {
-                Piece piece = Instantiate(piecePrefab, new Vector2(x+4.5f, y-2), Quaternion.identity);
+                Piece piece = Instantiate(piecePrefab, new Vector2(x + 4.5f, y - 2), Quaternion.identity);
                 piece.Init(x, y, array[n], sprites[array[n]], ClickToSwap);
                 pieces[x, y] = piece;
-                Debug.Log(pieces[x, y].index);
                 n++;
             }
         }
@@ -124,18 +108,6 @@ public class Puzzle : MonoBehaviour
     void ClickToSwap(int x, int y)
     {
 
-        // StringBuilder sb = new StringBuilder();
-        // sb.AppendLine("Puzzle:");
-
-        // for (int i = 0; i < 3; i++)
-        // {
-        //     for (int j = 0; j < 3; j++)
-        //     {
-        //         sb.Append(pieces[i, j].index + " ");
-        //     }
-        // }
-
-        // Debug.Log(sb.ToString());
         int dx = getDx(x, y);
         int dy = getDy(x, y);
 

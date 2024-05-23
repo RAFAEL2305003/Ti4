@@ -198,7 +198,6 @@ public class Grafo : MonoBehaviour
                 {
                     if (PuzzleCorreto(w.puzzle, referencia))
                     {
-                        Debug.Log("Encontrei");
                         w.anc = v;
                         encontrado = true;
                         break;

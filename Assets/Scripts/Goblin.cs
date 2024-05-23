@@ -14,7 +14,8 @@ public class Goblin : Enemy
 
     public bool hitable = true;
 
-    void Start(){
+    void Start()
+    {
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         // Definindo a vida inicial do Orc
@@ -25,7 +26,8 @@ public class Goblin : Enemy
         damage = 10;
     }
 
-    void Update(){
+    void Update()
+    {
         if (target != null)
         {
             //animator.Play("Goblin");
@@ -33,17 +35,20 @@ public class Goblin : Enemy
 
             rb.velocity = direction * moveSpeed;
 
-            if(direction.x >= 0){
+            if (direction.x >= 0)
+            {
                 sp.flipX = false;
             }
-            else {
+            else
+            {
                 sp.flipX = true;
             }
         }
 
     }
 
-    private void OnCollisionStay2D(Collision2D other) {
+    private void OnCollisionStay2D(Collision2D other)
+    {
         player = other.gameObject.GetComponent<PlayerController>();
         if (other.gameObject.CompareTag("Player") && hitable)
         {
@@ -72,25 +77,30 @@ public class Goblin : Enemy
         }
     }
 
-    public virtual void DoDamage(int amount) 
+    public virtual void DoDamage(int amount)
     {
         player.TakeDamage(amount);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.CompareTag("Player")){
-                animator.Play("AttackGoblin");
-                //Debug.Log("Colisão detectada com outro sprite!");
-            }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            animator.Play("AttackGoblin");
+            //Debug.Log("Colisão detectada com outro sprite!");
+        }
     }
-    private void OnCollisionExit2D(Collision2D other) {
-        if (other.gameObject.CompareTag("Player")){
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
             animator.Play("Goblin");
             //Debug.Log("Colisão detectada com outro sprite!");
         }
     }
 
-    protected override void Die(){
+    protected override void Die()
+    {
 
         base.Die();
     }

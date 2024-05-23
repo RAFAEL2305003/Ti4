@@ -6,14 +6,15 @@ public class Spawns : MonoBehaviour
 {
     public GameObject itemPrefab;
     public GameObject Inimigo1Goblin;
-    public float spawnRate = 1f; 
+    public float spawnRate = 1f;
     public Vector2 spawnAreaSize; // Tamanho da área de spawn nulu
 
     private float nextSpawnTime = 10;
     private float nextSpawnGoblinTime = 10;
-    private int numInimigos = 5;
+    private int numInimigos = 3;
 
-    private void Start() {
+    private void Start()
+    {
         nextSpawnTime = Time.time + 10;
         nextSpawnGoblinTime = Time.time + 10;
     }
@@ -25,18 +26,20 @@ public class Spawns : MonoBehaviour
             SpawnItem();
             SpawnItem();
             SpawnItem();
-            nextSpawnTime = Time.time + 20 ;
+            nextSpawnTime = Time.time + 20;
         }
         if (Time.time >= nextSpawnGoblinTime)
-        {   
+        {
             forDeSpawGoblin();
-            
-            nextSpawnGoblinTime = Time.time + 8 ;
+
+            nextSpawnGoblinTime = Time.time + 8;
         }
     }
 
-    private void forDeSpawGoblin(){
-        for (int i = 0; i < numInimigos; i++){
+    private void forDeSpawGoblin()
+    {
+        for (int i = 0; i < numInimigos; i++)
+        {
             SpawnGoblin();
         }
         numInimigos = 10;
