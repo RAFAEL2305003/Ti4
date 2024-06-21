@@ -123,10 +123,6 @@ public class PlayerController : MonoBehaviour
         int up = Input.GetKey(KeyCode.W) ? 1 : 0;
         int down = Input.GetKey(KeyCode.S) ? 1 : 0;*/
 
-        if(Input.GetKey(KeyCode.Escape)){
-            SceneManager.LoadScene("menu");
-        }
-
         if(vida == 0) {
             Destroy(gameObject);
             SceneManager.LoadScene("morte");
