@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: Please cite this software using these metadata.
+title: O Mago Mestre
+authors:
+ - family-names: Ronan Horta
+   given-names: Caio
+ - family-names: Antunes da Silva Frassi
+   given-names: Luiz Fernando
+ - family-names: Rodrigues Oliveira
+   given-names: Rafael
+ - family-names: de Oliveira Silva
+   given-names: Yuri
+ - name-suffix: Professora
+   affiliation: PUC Minas
+   family-names: Neri Nobre
+   given-names: Cristiane
+ - name-suffix: Professora
+   affiliation: PUC Minas
+   family-names: Ribeiro da Mota
+   given-names: Rosilane
+ - name-suffix: Professor
+   affiliation: PUC Minas
+   family-names: Martins Mol
+   given-names: Artur
+keywords:
+  - Jogo
+  - Rogue-Like
+  - Grafos
+  - IA
+  - Decision tree
+  - Unity
+repository-code: https://github.com/RAFAEL2305003/Ti4.git
+license: MIT license
+version: 1.0.0
+date-released: 2024-06-21
