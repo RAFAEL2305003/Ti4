@@ -17,7 +17,7 @@ public class Spawns : MonoBehaviour
     private void Start()
     {
         nextSpawnTime = Time.time + 10;
-        nextSpawnGoblinTime = Time.time + 5;
+        nextSpawnGoblinTime = Time.time + 10;
     }
 
     private void FixedUpdate()
@@ -33,7 +33,7 @@ public class Spawns : MonoBehaviour
         {
             forDeSpawGoblin();
 
-            nextSpawnGoblinTime = Time.time + 7;
+            nextSpawnGoblinTime = Time.time + 10;
         }
     }
 

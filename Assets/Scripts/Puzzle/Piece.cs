@@ -7,7 +7,7 @@ public class Piece : MonoBehaviour
 {
 
     public int index = 0;
-    int x = 0, y = 0;
+    public int x = 0, y = 0;
 
     private Action<int, int> swapFunc = null;
 

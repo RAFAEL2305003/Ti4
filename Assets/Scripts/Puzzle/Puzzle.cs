@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
+using Unity.VisualScripting;
+using System.IO;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class Puzzle : MonoBehaviour
 {
@@ -19,7 +23,7 @@ public class Puzzle : MonoBehaviour
     void Start()
     {
         grafo = Grafo.Instance;
-        grafo.BFS(grafo.vertices[200]);
+        grafo.BFS(grafo.vertices[210]);
         List<Vertice> vs = new List<Vertice>();
         Vertice v = grafo.vertices[0];
         vs.Insert(0, v);
@@ -33,7 +37,6 @@ public class Puzzle : MonoBehaviour
         int[] array = ConverterMatrizParaArray(vs[0].puzzle);
         Init(array);
         StartCoroutine(PlaySolution(vs));
-
     }
 
     IEnumerator PlaySolution(List<Vertice> vs)
@@ -79,9 +82,14 @@ public class Puzzle : MonoBehaviour
 
             ClickToSwap(x, y);
 
+
             // Aguarda 1 segundo antes de continuar para a próxima iteração
             yield return new WaitForSeconds(1.2f);
         }
+        // Debug.Log("O boss venceu!");
+        SceneManager.LoadScene("bossWon");
+        yield return new WaitForSeconds(0.75f);
+        SceneManager.LoadScene("SampleScene");
     }
 
     // Update is called once per frame
@@ -100,6 +108,7 @@ public class Puzzle : MonoBehaviour
                 Piece piece = Instantiate(piecePrefab, new Vector2(x + 4.5f, y - 2), Quaternion.identity);
                 piece.Init(x, y, array[n], sprites[array[n]], ClickToSwap);
                 pieces[x, y] = piece;
+                // Debug.Log(pieces[x, y].x + " " + pieces[x, y].y);
                 n++;
             }
         }
@@ -110,8 +119,6 @@ public class Puzzle : MonoBehaviour
 
         int dx = getDx(x, y);
         int dy = getDy(x, y);
-
-
 
         var from = pieces[x, y];
         var target = pieces[x + dx, y + dy];

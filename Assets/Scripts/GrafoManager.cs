@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -175,10 +176,10 @@ public class Grafo : MonoBehaviour
         return matriz;
     }
 
-    public bool PuzzleCorreto(int[,] matrizAtual, int[,] matrizAlvo)
+    public bool PuzzleCorreto(int[,] matrizAtual)
     {
         MatrizEqualityComparer comparer = new MatrizEqualityComparer();
-        return comparer.Equals(matrizAtual, matrizAlvo);
+        return comparer.Equals(matrizAtual, referencia);
     }
 
     public void BFS(Vertice u)
@@ -196,7 +197,7 @@ public class Grafo : MonoBehaviour
             {
                 if (w.cor == 0)
                 {
-                    if (PuzzleCorreto(w.puzzle, referencia))
+                    if (PuzzleCorreto(w.puzzle))
                     {
                         w.anc = v;
                         encontrado = true;
@@ -214,7 +215,6 @@ public class Grafo : MonoBehaviour
             }
         }
     }
-
 }
 
 public class MatrizEqualityComparer : IEqualityComparer<int[,]>

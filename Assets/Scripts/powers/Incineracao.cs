@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Incineracao : MonoBehaviour
 {
-    [SerializeField] private Camera mainCamera;
+    private Camera mainCamera;
 
     private GameObject player;
     public AudioSource audioSource;
@@ -35,6 +36,22 @@ public class Incineracao : MonoBehaviour
     void melhoria5(){// diminui delayPorHit = 0.2;
         delayPorHit = 0.2f;
     }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        mainCamera = Camera.main;
+    }
+
+    void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

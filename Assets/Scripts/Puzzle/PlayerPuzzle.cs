@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
+using UnityEngine.SceneManagement;
+using System.IO;
 
 public class PlayerPuzzle : MonoBehaviour
 {
@@ -15,11 +17,14 @@ public class PlayerPuzzle : MonoBehaviour
 
     Grafo grafo;
 
+
     // Start is called before the first frame update
     void Start()
     {
         grafo = Grafo.Instance;
-        int[] array = ConverterMatrizParaArray(grafo.vertices[200].puzzle);
+        System.Random rnd = new System.Random();
+        int r = rnd.Next(5, 250000);
+        int[] array = ConverterMatrizParaArray(grafo.vertices[r].puzzle);
         Init(array);
     }
 
@@ -58,6 +63,20 @@ public class PlayerPuzzle : MonoBehaviour
 
         from.UpdatePos(x + dx, y + dy);
         target.UpdatePos(x, y);
+        int [,]m = new int[3, 3];
+
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                int a = j;
+                int b = 2 - i;
+                m[i, j] = pieces[a, b].index;
+            } 
+        }
+        
+        if(grafo.PuzzleCorreto(m)) {
+            // Debug.Log("O jogador venceu!");
+            SceneManager.LoadScene("playerWon");
+        }  
     }
 
     int getDx(int x, int y)

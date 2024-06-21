@@ -28,6 +28,7 @@ public int increaseAmount = 5; // Valor pelo qual o dano será aumentado
         shootDamage2 = 10;
 
         audioSource = GetComponent<AudioSource>();
+
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
