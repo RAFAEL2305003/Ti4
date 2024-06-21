@@ -88,7 +88,10 @@ public class Goblin : Enemy
         {
             animator.Play("AttackGoblin");
             //Debug.Log("Colisão detectada com outro sprite!");
-        }
+        }else
+            {
+                Debug.LogWarning("Animator não atribuído ao Goblin!");
+            }
     }
     private void OnCollisionExit2D(Collision2D other)
     {
@@ -96,7 +99,10 @@ public class Goblin : Enemy
         {
             animator.Play("Goblin");
             //Debug.Log("Colisão detectada com outro sprite!");
-        }
+        }else
+            {
+                Debug.LogWarning("Animator não atribuído ao Goblin!");
+            }
     }
 
     protected override void Die()

@@ -1,0 +1,774 @@
+fileFormatVersion: 2
+guid: 848fdea2f9e82084d87444fd9bb16e40
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: incineracaoI_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 326
+        width: 102
+        height: 82
+      alignment: 9
+      pivot: {x: 0.03004336, y: 0.2912211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a32bede5a35b984a81e98b9c29ff87e
+      internalID: -1246582069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 326
+        width: 102
+        height: 82
+      alignment: 9
+      pivot: {x: 0.03004336, y: 0.2912211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9692750dcd985443b08e3ad9af9a90c
+      internalID: -1992298065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 326
+        width: 102
+        height: 82
+      alignment: 9
+      pivot: {x: 0.03004336, y: 0.2912211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72ed2a2299a2fd4dad40fd736bcbee6
+      internalID: 1194609932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_3
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 326
+        width: 102
+        height: 82
+      alignment: 9
+      pivot: {x: 0.03004336, y: 0.2912211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd5f67f1315610409a4d4a37e39e190
+      internalID: 2038936827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_4
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 326
+        width: 102
+        height: 82
+      alignment: 9
+      pivot: {x: 0.03004336, y: 0.2912211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1a4a75d48384241a96e2f2bf1a6f5c
+      internalID: 2086294772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 326
+        width: 102
+        height: 82
+      alignment: 9
+      pivot: {x: 0.03004336, y: 0.2912211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce14ecab56e1b54eae9be50e0490ad7
+      internalID: 722401533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 245.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a149c3c540cca874a9d9ee9b59d30b12
+      internalID: -1673266591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_7
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 245.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763c460d27aa87a4d806da0207d6f6e0
+      internalID: -785375064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_8
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 245.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3808ba670c23a4dae78723c2b535b9
+      internalID: -762358159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 245.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08518d1b1261e8541bd6d1f7bb4c94a7
+      internalID: 33267415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_10
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 245.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ce21b4af9ddc2498a33c0b3ad7c285
+      internalID: -444937088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_11
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 245.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1644409c237579409c75859e7ebe833
+      internalID: -298155931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 164.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64020bdaa8b70345802b74fe2e2184f
+      internalID: 506979431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_13
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 164
+        width: 102
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d1e9c59f72f4945b2b12437d5db4b5
+      internalID: 657566441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_14
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 164.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803be7b5e4d4fb34892ad2b9c3d83a19
+      internalID: 579046850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_15
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 164.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221e51821dd6bc1459176adef4d4d601
+      internalID: 1021091965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_16
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 164.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955cd7d2cbaed1a4cb7cf401a3e978b6
+      internalID: 383023167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_17
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 164.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a90ed4b606da6428f0a614ea73a63e
+      internalID: 561752853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 83.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f393e2838d59a4992e50f8fed4ca33
+      internalID: 1605371400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_19
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 83.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bfd0fac08933548b6d840d8b80a50b
+      internalID: 1230245953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_20
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 83.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea0c9466924b924480b4c61f3903983
+      internalID: 1822018262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_21
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 83.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801cbb8cad9e9b14ca29c6cb9b516d33
+      internalID: 257723095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_22
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 83.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51c13ad9c3e72643a59dae3f0424961
+      internalID: -1706911633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_23
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 83.4
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f5fc5276bcf99459b7ca1433396694
+      internalID: 1280728584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_-1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 94
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8a059aa13da6541bcfdcce91a46024
+      internalID: -2102728680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_25
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2.4000015
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8b2b4af4ead3349afe8f4791794617
+      internalID: 453122377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_26
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2.4000015
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7049a7f8b68ec1f48b0fdbcd175df239
+      internalID: -1365692199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_27
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 2.4000015
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e261b944acde97b4aa13d4084dbeee84
+      internalID: -1732714662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_28
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 2.4000015
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f53e17a5c4cc44fbd3fa15af0dea10
+      internalID: -1791490278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: incineracaoI_29
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 2.4000015
+        width: 102
+        height: 81.6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96cf115c38e514429b3bf26fc8bdd8e
+      internalID: -497036497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      incineracaoI_-1: -2102728680
+      incineracaoI_0: -1246582069
+      incineracaoI_1: -1992298065
+      incineracaoI_10: -444937088
+      incineracaoI_11: -298155931
+      incineracaoI_12: 506979431
+      incineracaoI_13: 657566441
+      incineracaoI_14: 579046850
+      incineracaoI_15: 1021091965
+      incineracaoI_16: 383023167
+      incineracaoI_17: 561752853
+      incineracaoI_18: 1605371400
+      incineracaoI_19: 1230245953
+      incineracaoI_2: 1194609932
+      incineracaoI_20: 1822018262
+      incineracaoI_21: 257723095
+      incineracaoI_22: -1706911633
+      incineracaoI_23: 1280728584
+      incineracaoI_25: 453122377
+      incineracaoI_26: -1365692199
+      incineracaoI_27: -1732714662
+      incineracaoI_28: -1791490278
+      incineracaoI_29: -497036497
+      incineracaoI_3: 2038936827
+      incineracaoI_4: 2086294772
+      incineracaoI_5: 722401533
+      incineracaoI_6: -1673266591
+      incineracaoI_7: -785375064
+      incineracaoI_8: -762358159
+      incineracaoI_9: 33267415
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

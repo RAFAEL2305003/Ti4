@@ -6,17 +6,18 @@ public class Spawns : MonoBehaviour
 {
     public GameObject itemPrefab;
     public GameObject Inimigo1Goblin;
+    public GameObject Mushroom;
     public float spawnRate = 1f;
     public Vector2 spawnAreaSize; // Tamanho da área de spawn nulu
 
     private float nextSpawnTime = 10;
     private float nextSpawnGoblinTime = 10;
-    private int numInimigos = 3;
+    private int numInimigos = 10;
 
     private void Start()
     {
         nextSpawnTime = Time.time + 10;
-        nextSpawnGoblinTime = Time.time + 10;
+        nextSpawnGoblinTime = Time.time + 5;
     }
 
     private void FixedUpdate()
@@ -32,7 +33,7 @@ public class Spawns : MonoBehaviour
         {
             forDeSpawGoblin();
 
-            nextSpawnGoblinTime = Time.time + 8;
+            nextSpawnGoblinTime = Time.time + 7;
         }
     }
 
@@ -41,8 +42,9 @@ public class Spawns : MonoBehaviour
         for (int i = 0; i < numInimigos; i++)
         {
             SpawnGoblin();
+            SpawnMushroom();
         }
-        numInimigos = 10;
+        numInimigos = 3;
     }
 
     private void SpawnItem()
@@ -78,6 +80,17 @@ public class Spawns : MonoBehaviour
 
         // Instancia o item na posição calculada
         Instantiate(Inimigo1Goblin, spawnPosition, Quaternion.identity);
+    }
+
+    private void SpawnMushroom()
+    {
+        // Calcula uma posição aleatória dentro da área de spawn
+        float randomX = Random.Range(-35, 35);
+        float randomY = Random.Range(-23, 32);
+        Vector2 spawnPosition = new Vector2(randomX, randomY);
+
+        // Instancia o item na posição calculada
+        Instantiate(Mushroom, spawnPosition, Quaternion.identity);
     }
 
 }
