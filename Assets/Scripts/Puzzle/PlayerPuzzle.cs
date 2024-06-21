@@ -13,6 +13,8 @@ public class PlayerPuzzle : MonoBehaviour
 
     public PlayerPiece[,] pieces = new PlayerPiece[3, 3];
 
+    private PlayerController player;
+
     public Sprite[] sprites;
 
     Grafo grafo;
@@ -22,9 +24,10 @@ public class PlayerPuzzle : MonoBehaviour
     void Start()
     {
         grafo = Grafo.Instance;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         System.Random rnd = new System.Random();
         int r = rnd.Next(5, 250000);
-        int[] array = ConverterMatrizParaArray(grafo.vertices[r].puzzle);
+        int[] array = ConverterMatrizParaArray(grafo.vertices[200].puzzle);
         Init(array);
     }
 
@@ -74,6 +77,7 @@ public class PlayerPuzzle : MonoBehaviour
         }
         
         if(grafo.PuzzleCorreto(m)) {
+            player.ganhou = true;
             // Debug.Log("O jogador venceu!");
             SceneManager.LoadScene("playerWon");
         }  

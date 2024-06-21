@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
     public float vida = 100;
     public int random;
+    public bool ganhou;
     
     private void Awake()
     {
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
             barra.alterarVida(vida);
         }
     }
+
 
     private void OnDestroy()
     {

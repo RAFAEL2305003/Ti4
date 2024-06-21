@@ -20,21 +20,51 @@ public class Incineracao : MonoBehaviour
     private float timer; // Contador de tempo
     public float visibleTime; // Tempo em segundos que o objeto fica visível 4
     public float invisibleTime; // Tempo em segundos que o objeto fica invisível 18
+    public int level;
+
+    public void upar(){
+        switch(level) 
+        {
+        case 0:
+            melhoria1();
+            break;
+        case 1:
+            melhoria2();
+            break;
+        case 2:
+            melhoria3();
+            break;
+        case 3:
+            melhoria4();
+            break;
+        case 4:
+            melhoria5();
+            break;
+        default:
+            break;
+        }
+    }
+
     void melhoria1(){// aumenta visibleTime + 2;
         visibleTime = 6;
+        level = 1;
     }
     void melhoria2(){// diminui invisibleTime - 2;
         invisibleTime = 16;
+        level = 2;
     }
     void melhoria3(){// aumenta damage + 2;
         damage = 12;
         d = 12;
+        level = 3;
     }
     void melhoria4(){// aumenta visibleTime + 1;
         visibleTime = 7;
+        level = 4;
     }
     void melhoria5(){// diminui delayPorHit = 0.2;
         delayPorHit = 0.2f;
+        level = 5;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -68,44 +98,47 @@ public class Incineracao : MonoBehaviour
     // Update is called once per frame
 
     public void FixedUpdate() {
-
-        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPosition.z = 0f; // Assegura que está no plano 2D.
-
-        Vector3 direction = mouseWorldPosition - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Calcula o ângulo em graus.
-        transform.rotation = Quaternion.Euler(0f, 0f, angle - 0); // Ajusta a rotação. Subtraia 90 se necessário para alinhar com a frente do seu objeto.]
-
-        transform.position = player.transform.position;
-
-        if (atividade == true)
+        if (mainCamera != null)
         {
-            timer -= Time.deltaTime;
-        
-            if (timer <= 0f)
-            {
-                // Inverte a visibilidade
-                SetVisibility(!visivel);
-                
-                // Reinicia o timer baseado na visibilidade atual
-                if (visivel)
+                Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                mouseWorldPosition.z = 0f; // Assegura que está no plano 2D.
+
+                Vector3 direction = mouseWorldPosition - transform.position;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Calcula o ângulo em graus.
+                transform.rotation = Quaternion.Euler(0f, 0f, angle - 0); // Ajusta a rotação. Subtraia 90 se necessário para alinhar com a frente do seu objeto.]
+
+                transform.position = player.transform.position;
+
+                if (atividade == true)
                 {
-                    timer = visibleTime;
+                    timer -= Time.deltaTime;
+
+                    if (timer <= 0f)
+                    {
+                        // Inverte a visibilidade
+                        SetVisibility(!visivel);
+
+                        // Reinicia o timer baseado na visibilidade atual
+                        if (visivel)
+                        {
+                            timer = visibleTime;
+                        }
+                        else
+                        {
+                            timer = invisibleTime;
+                        }
+                    }
+                    //transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+                }else{
+                    audioSource.Stop();
+                    animator.SetBool("ativ", false);
+                    animator.SetBool("Fiml", true);
+                    damage = 0;
                 }
-                else
-                {
-                    timer = invisibleTime;
-                }
+
             }
-            //transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
-        }else{
-            audioSource.Stop();
-            animator.SetBool("ativ", false);
-            animator.SetBool("Fiml", true);
-            damage = 0;
+
         }
-        
-    }
 
     void SetVisibility(bool visible)
     {

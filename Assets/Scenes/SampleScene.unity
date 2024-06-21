@@ -7760,6 +7760,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1104930841}
+        m_TargetAssemblyTypeName: CirculoDeFogo, Assembly-CSharp
+        m_MethodName: upar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &221458338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14106,6 +14118,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 811679381}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &403176718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15195,6 +15219,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 833066235}
+        m_TargetAssemblyTypeName: Explosion, Assembly-CSharp
+        m_MethodName: upar
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -25689,6 +25725,7 @@ Transform:
   m_LocalScale: {x: 2.3006, y: 2.3006, z: 2.3006}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1563842293}
   - {fileID: 833066232}
   - {fileID: 799169111}
   - {fileID: 378428293}
@@ -25708,11 +25745,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  animator: {fileID: 0}
-  sp: {fileID: 0}
+  animator: {fileID: 726784064}
+  sp: {fileID: 726784065}
   barra: {fileID: 2008242584}
   vida: 100
   random: 0
+  ganhou: 0
 --- !u!61 &726784068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28938,6 +28976,7 @@ MonoBehaviour:
   delayPorHit: 0
   visibleTime: 4
   invisibleTime: 18
+  level: 0
 --- !u!95 &799169115
 Animator:
   serializedVersion: 5
@@ -29581,6 +29620,7 @@ MonoBehaviour:
   distanciaMaxima: 10
   hitable: 0
   audioSource: {fileID: 811679383}
+  level: 0
 --- !u!1 &814572911
 GameObject:
   m_ObjectHideFlags: 0
@@ -30206,6 +30246,7 @@ MonoBehaviour:
   hitable: 0
   tempo_de_espera: 38
   count: 0
+  level: 0
 --- !u!82 &833066236
 AudioSource:
   m_ObjectHideFlags: 0
@@ -112833,6 +112874,7 @@ MonoBehaviour:
   visibleTime: 4
   invisibleTime: 16
   rotationSpeed: 1200
+  level: 0
 --- !u!212 &1104930842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -128396,7 +128438,7 @@ GameObject:
   - component: {fileID: 1523650625}
   m_Layer: 5
   m_Name: Poderes
-  m_TagString: Untagged
+  m_TagString: Poderes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129576,13 +129618,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563842292}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.946067, y: 3.925865, z: -1.6974422}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.1496425, y: -0.20609197, z: -0.31185004}
+  m_LocalScale: {x: 0.43466923, y: 0.43466923, z: 0.43466923}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 811679382}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 726784066}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1569761465
 GameObject:
@@ -137789,6 +137831,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2036343726}
+        m_TargetAssemblyTypeName: RaioDeSubmissao, Assembly-CSharp
+        m_MethodName: upar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1774374981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140047,6 +140101,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 799169114}
+        m_TargetAssemblyTypeName: Incineracao, Assembly-CSharp
+        m_MethodName: upar
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -145644,6 +145710,7 @@ MonoBehaviour:
   delayPorHit: 0
   visibleTime: 4
   invisibleTime: 14
+  level: 0
 --- !u!212 &2036343727
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -148154,10 +148221,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttons:
   - {fileID: 1774374980}
-  - {fileID: 433289317}
   - {fileID: 403176717}
   - {fileID: 221458337}
   - {fileID: 1861468755}
+  - {fileID: 433289317}
 --- !u!1 &2102920690
 GameObject:
   m_ObjectHideFlags: 0
@@ -150367,9 +150434,9 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 2069322904}
   - {fileID: 148648820206649836}
+  - {fileID: 138098525}
   - {fileID: 726784066}
   - {fileID: 624582677}
-  - {fileID: 138098525}
   - {fileID: 1122779778}
   - {fileID: 1869368560}
   - {fileID: 1272202702}
@@ -150383,4 +150450,3 @@ SceneRoots:
   - {fileID: 612417310}
   - {fileID: 128344165}
   - {fileID: 1908635617}
-  - {fileID: 1563842293}

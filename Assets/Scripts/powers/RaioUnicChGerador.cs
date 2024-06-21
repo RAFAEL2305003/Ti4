@@ -13,18 +13,50 @@ public class RaioUnicChGerador : MonoBehaviour
     public float distanciaMaxima = 5f; // Distância máxima do objeto específico onde o clone pode aparecer
     public bool hitable;
     public AudioSource audioSource;
+    public int level;
+
+    public void upar(){
+        switch(level) 
+        {
+        case 0:
+            melhoria1();
+            break;
+        case 1:
+            melhoria2();
+            break;
+        case 2:
+            melhoria3();
+            break;
+        case 3:
+            melhoria4();
+            break;
+        case 4:
+            melhoria5();
+            break;
+        default:
+            break;
+        }
+    }
 
     void melhoria1(){// aumenta + 5 raios
         quantidadeRaios = 15;
+        level = 1;
     }
     void melhoria2(){// distanciaMaxima * 2 
         distanciaMaxima = 20;
+        level = 2;
     }
     void melhoria3(){// aumenta * 2 raios
         quantidadeRaios = 30;
+        level = 3;
     }
     void melhoria4(){// diminui - 5 tempo_de_espera
         tempo_de_espera = 19;
+        level = 4;
+    }
+    void melhoria5(){// diminui - 5 tempo_de_espera
+        tempo_de_espera = 10;
+        level = 5;
     }
 
     IEnumerator CountToTen()

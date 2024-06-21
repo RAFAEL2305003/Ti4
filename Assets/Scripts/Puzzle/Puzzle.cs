@@ -17,11 +17,14 @@ public class Puzzle : MonoBehaviour
 
     public Sprite[] sprites;
 
+    private PlayerController player;
+
     Grafo grafo;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         grafo = Grafo.Instance;
         grafo.BFS(grafo.vertices[210]);
         List<Vertice> vs = new List<Vertice>();
@@ -86,6 +89,7 @@ public class Puzzle : MonoBehaviour
             // Aguarda 1 segundo antes de continuar para a próxima iteração
             yield return new WaitForSeconds(1.2f);
         }
+        player.ganhou = false;
         // Debug.Log("O boss venceu!");
         SceneManager.LoadScene("bossWon");
         yield return new WaitForSeconds(0.75f);

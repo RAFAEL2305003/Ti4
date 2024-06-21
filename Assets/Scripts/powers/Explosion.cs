@@ -12,20 +12,50 @@ public class Explosion : MonoBehaviour
     public bool hitable;
     public int tempo_de_espera;
     public int count; // Contador de tempo
+    public int level;
+
+    public void upar(){
+        switch(level) 
+        {
+        case 0:
+            melhoria1();
+            break;
+        case 1:
+            melhoria2();
+            break;
+        case 2:
+            melhoria3();
+            break;
+        case 3:
+            melhoria4();
+            break;
+        case 4:
+            melhoria5();
+            break;
+        default:
+            break;
+        }
+    }
+
     void melhoria1(){// diminui tempo_de_espera - 4;
         tempo_de_espera = 34;
+        level = 1;
     }
     void melhoria2(){// diminui tempo_de_espera - 2;
         tempo_de_espera = 32;
+        level = 2;
     }
     void melhoria3(){// diminui tempo_de_espera - 2;
         tempo_de_espera = 30;
+        level = 3;
     }
     void melhoria4(){// diminui tempo_de_espera - 4;
         tempo_de_espera = 26;
+        level = 4;
     }
     void melhoria5(){// diminui tempo_de_espera - 2;
         tempo_de_espera = 24;
+        level = 5;
     }
     // Start is called before the first frame update
     void Start()
@@ -34,7 +64,7 @@ public class Explosion : MonoBehaviour
         d = damage;
         hitable = false;
         animator.SetBool("ativ", false);
-        StartCoroutine(CountToTen());
+        StartCoroutine(CountToTen()); 
     }
 /*
     void texto(){

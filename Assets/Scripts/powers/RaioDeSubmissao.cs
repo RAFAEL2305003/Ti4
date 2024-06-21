@@ -14,24 +14,52 @@ public class RaioDeSubmissao : MonoBehaviour
     public float delayPorHit;
     public float visibleTime; // Tempo em segundos que o objeto fica visível 4
     public float invisibleTime; // Tempo em segundos que o objeto fica invisível 14
-
-
+    public int level;
     private float timer; // Contador de tempo
+
+    public void upar(){
+        switch(level) 
+        {
+        case 0:
+            melhoria1();
+            break;
+        case 1:
+            melhoria2();
+            break;
+        case 2:
+            melhoria3();
+            break;
+        case 3:
+            melhoria4();
+            break;
+        case 4:
+            melhoria5();
+            break;
+        default:
+            break;
+        }
+    }
+
     void melhoria1(){// aumenta visibleTime + 2;
+        level = 1;
         visibleTime = 6;
     }
     void melhoria2(){// diminui invisibleTime - 2;
         invisibleTime = 12;
+        level = 2;
     }
     void melhoria3(){// aumenta damage + 2;
         damage = 7;
         d = 7;
+        level = 3;
     }
     void melhoria4(){// aumenta visibleTime + 2;
         visibleTime = 8;
+        level = 4;
     }
     void melhoria5(){// diminui delayPorHit = 0.1;
         delayPorHit = 0.1f;
+        level = 5;
     }
     // Start is called before the first frame update
     void Start()
