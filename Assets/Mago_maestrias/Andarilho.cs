@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 //    bool isMoving = false;
     private Rigidbody2D fisic;
     public BarraDeVida barra;
+    public BarraDeVida barraMenu;
     public float vida = 100;
 
     void Start()
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
         barra.colocarVidaMaxima(vida);
+        barraMenu.colocarVidaMaxima(vida);
     }
 /*
     private void OnCollisionStay2D(Collision2D other) {
@@ -40,21 +42,21 @@ public class PlayerController : MonoBehaviour
             //this.transform.Translate(movis);
     private void FixedUpdate(){
         lastPosition = movis;
-        if(Input.GetKey(KeyCode.W)){
+        if(Input.GetKey(KeyCode.W) && pause.instance.jogoPausado == false){
             animator.Play("Move");
         }
-        if(Input.GetKey(KeyCode.A)){
+        if(Input.GetKey(KeyCode.A) && pause.instance.jogoPausado == false){
             animator.Play("Move");
             sp.flipX = true;
         }
-        if(Input.GetKey(KeyCode.S)){
+        if(Input.GetKey(KeyCode.S) && pause.instance.jogoPausado == false){
             animator.Play("Move");
         }
-        if(Input.GetKey(KeyCode.D)){
+        if(Input.GetKey(KeyCode.D) && pause.instance.jogoPausado == false){
             animator.Play("Move");
             sp.flipX = false;
         }
-        if (!Input.anyKey)
+        if (!Input.anyKey && pause.instance.jogoPausado == false)
         {
             animator.Play("Idle");
         }
@@ -89,9 +91,6 @@ public class PlayerController : MonoBehaviour
         int up = Input.GetKey(KeyCode.W) ? 1 : 0;
         int down = Input.GetKey(KeyCode.S) ? 1 : 0;*/
 
-        if(Input.GetKey(KeyCode.Escape)){
-            SceneManager.LoadScene("menu");
-        }
 
 
         
@@ -125,5 +124,13 @@ public class PlayerController : MonoBehaviour
     {
         vida -= 10.0f;
         barra.alterarVida(vida);
+        barraMenu.alterarVida(vida);
+    }
+
+    public void RegenarVida()
+    {
+        vida = 100.0f;
+        barra.alterarVida(vida);
+        barraMenu.alterarVida(vida);
     }
 }

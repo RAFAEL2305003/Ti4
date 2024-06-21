@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Posicao : MonoBehaviour
@@ -10,30 +11,51 @@ public class Posicao : MonoBehaviour
     public GameObject shoot;
     private AudioSource audioSource;
 
-    public float speed = 20f; // You can adjust the initial value as needed
+    public float speed = 20f;
+    public Text dano;
+    public Text dano1;
+    public Text dano2;
 
-    // Start is called before the first frame update
+public int increaseAmount = 5; // Valor pelo qual o dano será aumentado
+    public int shootDamage;
+    public int shootDamage1;
+    public int shootDamage2;
+
     void Start()
     {
+        shootDamage = 10;
+        shootDamage1 = 10;
+        shootDamage2 = 10;
+
         audioSource = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
+
+        dano.text = shootDamage.ToString();
+        dano1.text = shootDamage1.ToString();
+        dano2.text = shootDamage2.ToString();
+
         Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPosition.z = 0f; // Assegura que está no plano 2D.
+        mouseWorldPosition.z = 0f;
 
         Vector3 direction = mouseWorldPosition - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Calcula o ângulo em graus.
-        transform.rotation = Quaternion.Euler(0f, 0f, angle - 45); // Ajusta a rotação. Subtraia 90 se necessário para alinhar com a frente do seu objeto.]
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if(pause.instance.jogoPausado == false){ //travar o cajado no pause
+        transform.rotation = Quaternion.Euler(0f, 0f, angle - 45);
 
         transform.position = player.transform.position;
 
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0) && pause.instance.jogoPausado == false){
             PlaySound(audioSource.clip);
             GameObject iShoot = Instantiate(shoot, transform.position, Quaternion.identity);
+
+            Shoot shootScript = iShoot.GetComponent<Shoot>();
+            if (shootScript != null) {
+                shootScript.damage = shootDamage; 
+            }
 
             Rigidbody2D rb = iShoot.GetComponent<Rigidbody2D>();
 
@@ -45,6 +67,7 @@ public class Posicao : MonoBehaviour
             iShoot.transform.rotation = rotation;
         }
     }
+}
 /*
     public void PlaySound()
     {
@@ -80,5 +103,22 @@ public class Posicao : MonoBehaviour
     }
 }
 
+public void IncreaseDamage()
+    {
+        shootDamage += increaseAmount;
+    }
+
+
+public void IncreaseDamage1()
+    {
+        shootDamage1 += increaseAmount;
+    }
+
+
+public void IncreaseDamage2()
+    {
+        shootDamage2 += increaseAmount;
+    }
 
 }
+

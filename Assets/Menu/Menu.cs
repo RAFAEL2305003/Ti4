@@ -16,5 +16,10 @@ public class Menu : MonoBehaviour
        Debug.Log ("saiu do jogo");
        Application.Quit();
     }
+
+    public void Voltar()
+    {
+        SceneManager.LoadScene("Menu");
+    }
     
 }
